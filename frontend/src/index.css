@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+/*
+ * Design tokens de NORDA (seccion 8 de la especificacion).
+ * Paleta editorial calida: negro tinta, papel crudo, arena, terracota como acento.
+ * Nada de gradientes ni sombras pesadas: la elegancia viene del espacio y la tipografia.
+ */
+@theme {
+  --color-ink: #17130f;
+  --color-ink-soft: #3a332c;
+  --color-paper: #f7f2ea;
+  --color-sand: #ece2d3;
+  --color-sand-dark: #d9cab3;
+  --color-clay: #a9633d;
+  --color-clay-dark: #7c4526;
+  /* success/warning conservan el tono original pero se oscurecen para cumplir
+     WCAG AA (4.5:1) como texto sobre --color-paper: los valores de partida
+     rendian 4.38:1 y 2.77:1 respectivamente (hallado con axe-core, seccion 42). */
+  --color-success: #2f6b4a;
+  --color-warning: #7d5a12;
+  --color-danger: #b0402f;
+
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+
+  --radius-card: 1rem;
+}
+
+body {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}

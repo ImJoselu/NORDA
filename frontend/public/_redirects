@@ -1,0 +1,10 @@
+# sitemap.xml y robots.txt son generados dinamicamente por el backend a partir
+# de los slugs reales en base de datos (ver com.norda.seo.SeoController y
+# docs/adr/ADR-007-seo-prerendering.md). El frontend estatico no los sirve el
+# mismo: este host debe reenviarlos al backend en produccion.
+#
+# Formato Netlify (funciona igual como referencia para Cloudflare Pages _redirects;
+# en Vercel usar "rewrites" en vercel.json con la misma URL destino).
+# Sustituye BACKEND_URL por la URL real del backend desplegado (deploy.md).
+/sitemap.xml  https://BACKEND_URL/sitemap.xml  200
+/robots.txt   https://BACKEND_URL/robots.txt   200

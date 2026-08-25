@@ -1,0 +1,42 @@
+# Docker es OPCIONAL. Ni el backend ni el frontend dependen de este archivo para
+# funcionar (ver README.md). Sirve como atajo para:
+#   - levantar solo Postgres:      docker compose up postgres
+#   - levantar el stack completo:  docker compose up
+#
+# Requiere un archivo .env en la raiz (copia .env.example) con, como minimo,
+# DATABASE_USERNAME y DATABASE_PASSWORD para inicializar el contenedor de Postgres.
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: norda
+      POSTGRES_USER: ${DATABASE_USERNAME:-postgres}
+      POSTGRES_PASSWORD: ${DATABASE_PASSWORD:-postgres}
+    ports:
+      - "5432:5432"
+    volumes:
+      - norda_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DATABASE_USERNAME:-postgres} -d norda"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  backend:
+    build: ./backend
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      SPRING_PROFILES_ACTIVE: local
+      DATABASE_URL: jdbc:postgresql://postgres:5432/norda
+      DATABASE_USERNAME: ${DATABASE_USERNAME:-postgres}
+      DATABASE_PASSWORD: ${DATABASE_PASSWORD:-postgres}
+      CORS_ALLOWED_ORIGINS: ${CORS_ALLOWED_ORIGINS:-http://localhost:5173}
+      JWT_SECRET: ${JWT_SECRET:-local-only-dev-secret-do-not-use-in-production-0123456789}
+    ports:
+      - "8080:8080"
+
+volumes:
+  norda_pgdata:

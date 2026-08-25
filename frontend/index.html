@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--
+      Solo el title vive aqui de forma estatica (es un tag singular, react-helmet-async
+      lo sobrescribe de forma segura via document.title). El resto de metadata -
+      description, Open Graph, Twitter Card, canonical, JSON-LD - la gestiona
+      exclusivamente <Seo> (src/components/seo/Seo.tsx) via Helmet: un <meta> repetible
+      definido aqui de forma estatica NO lo elimina Helmet al montar, asi que conviviria
+      duplicado y ambiguo con el que inyecta cada pagina. Ver ADR-007.
+    -->
+    <title>NØRDA — Descubre el café detrás de cada origen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

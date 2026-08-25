@@ -1,0 +1,35 @@
+# Entornos y secretos
+.env
+.env.local
+*.env.local
+
+# Backend (Maven)
+backend/target/
+!backend/.mvn/wrapper/maven-wrapper.jar
+
+# Frontend (Node/Vite)
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# IDE / OS
+.idea/
+*.iml
+.vscode/*
+!.vscode/extensions.json
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Guias de despliegue: pasos ligados a infraestructura real (deploy.md) o a la
+# maquina concreta de desarrollo (deployLocal.md, rutas/versiones locales que no
+# aplican a otros equipos) - no forman parte del codigo publico del repositorio
+# (ver seccion 66 del brief).
+deploy.md
+deployLocal.md
+
+# Credenciales de cuentas de prueba locales - nunca deben acabar en un repo publico.
+usersLocal.md
