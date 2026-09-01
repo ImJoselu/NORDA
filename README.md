@@ -14,12 +14,58 @@ límites conocidos.
 
 ## Capturas
 
+Un recorrido visual completo por la aplicación, de cliente a administrador.
+
+### Descubrimiento y catálogo
+
 | | |
 |---|---|
 | ![Home](docs/screenshots/home.png) | ![Catálogo](docs/screenshots/catalog.png) |
-| ![Ficha de producto](docs/screenshots/product-detail.png) | ![Mapa de orígenes](docs/screenshots/origins-map.png) |
-| ![Coffee Finder](docs/screenshots/finder.png) | ![Journal](docs/screenshots/journal.png) |
-| ![Panel de administración](docs/screenshots/admin-dashboard.png) | |
+| Home | Catálogo, con filtros por país, proceso, tueste y método |
+| ![Ficha de producto](docs/screenshots/product-detail.png) | ![Mapa mundial de orígenes](docs/screenshots/origins-map.png) |
+| Ficha de producto — foto real de finca | Mapa mundial de orígenes (Leaflet, sin claves de API) |
+| ![Países con bandera](docs/screenshots/origins-flags.png) | ![Ficha de país](docs/screenshots/country-detail.png) |
+| Listado de países por continente | Ficha de país, con mapa de sus regiones |
+| ![Ficha de región](docs/screenshots/region.png) | |
+| Ficha de región, con productores y cafés | |
+
+### Coffee Finder
+
+| | |
+|---|---|
+| ![Cuestionario del Coffee Finder](docs/screenshots/finder-quiz.png) | ![Resultado del Coffee Finder](docs/screenshots/finder-results.png) |
+| Cuestionario de 5 preguntas | Recomendación explicada, con alternativas |
+
+### Compra: carrito y checkout
+
+| | |
+|---|---|
+| ![Carrito lateral](docs/screenshots/cart.png) | ![Checkout: datos](docs/screenshots/checkout-datos.png) |
+| Carrito lateral | Checkout — paso 1: datos de contacto |
+| ![Checkout: dirección](docs/screenshots/checkout-direccion.png) | ![Checkout: envío](docs/screenshots/checkout-envio.png) |
+| Checkout — paso 2: dirección de envío | Checkout — paso 3: método de envío |
+| ![Checkout: pago](docs/screenshots/checkout-pago.png) | ![Checkout: confirmación](docs/screenshots/checkout-confirmacion.png) |
+| Checkout — paso 4: pasarela de pago (modo demo) | Checkout — paso 5: pedido confirmado |
+
+### Cuenta y contenido editorial
+
+| | |
+|---|---|
+| ![Inicio de sesión](docs/screenshots/login.png) | ![Registro](docs/screenshots/register.png) |
+| Inicio de sesión | Creación de cuenta |
+| ![Journal](docs/screenshots/journal.png) | ![Artículo del Journal](docs/screenshots/journal-post.png) |
+| Journal — listado de artículos | Artículo con SEO dinámico y JSON-LD |
+
+### Panel de administración
+
+| | |
+|---|---|
+| ![Panel: resumen](docs/screenshots/admin-dashboard.png) | ![Panel: pedidos](docs/screenshots/admin-orders.png) |
+| Resumen con métricas reales (ventas, ticket medio, clientes) | Gestión de pedidos, con máquina de estados |
+| ![Panel: productos](docs/screenshots/admin-products.png) | ![Panel: orígenes](docs/screenshots/admin-origins.png) |
+| Gestión de productos | Gestión de países, regiones y productores |
+| ![Panel: clientes](docs/screenshots/admin-customers.png) | |
+| Gestión de clientes | |
 
 ## Qué se puede hacer hoy
 

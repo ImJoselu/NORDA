@@ -1,9 +1,57 @@
 # Créditos de imágenes
 
-Todas las fotografías de este directorio proceden de Wikimedia Commons y están bajo una licencia
-que permite uso comercial libre (dominio público, CC0, CC BY o CC BY-SA). Se listan aquí para
-trazabilidad y para cumplir la atribución requerida por las licencias CC BY/CC BY-SA. 18/18
-imágenes completas.
+Salvo lo indicado en "Fotos propias de producto", todas las fotografías de este directorio
+proceden de Wikimedia Commons y están bajo una licencia que permite uso comercial libre (dominio
+público, CC0, CC BY o CC BY-SA). Se listan aquí para trazabilidad y para cumplir la atribución
+requerida por las licencias CC BY/CC BY-SA.
+
+## Fotos propias de producto (`coffees/products/`)
+
+Fotografías reales del propio café/finca (no de banco de imágenes), aportadas por NØRDA.
+`CoffeePhoto` las usa con prioridad absoluta sobre el pool genérico por nivel de tueste
+(`PRODUCT_PHOTOS` en `CoffeePhoto.tsx`).
+
+- `colombia-narino-finca-el-mirador.webp` — Café en secado (parchamino) en Finca El Mirador, Nariño.
+
+## Banderas (`flags/`)
+
+Banderas vectoriales oficiales servidas por [flagcdn.com](https://flagcdn.com) (basadas en los
+diseños de dominio público de [github.com/lipis/flag-icons](https://github.com/lipis/flag-icons)),
+sin restricciones de copyright al ser representaciones geométricas de símbolos nacionales oficiales.
+
+- `colombia.svg`, `brasil.svg`, `costa-rica.svg`, `etiopia.svg`, `guatemala.svg`, `indonesia.svg`,
+  `kenia.svg`, `panama.svg`, `peru.svg`, `ruanda.svg`
+
+## Café por nivel de tueste (`coffees/`)
+
+Varias fotos por nivel de tueste, con un índice explícito por producto (slug → foto, ver
+`PRODUCT_IMAGE_INDEX` en `CoffeePhoto.tsx`) calculado a partir de los 28 productos de la base de
+datos semilla para que dos cafés del mismo país o región nunca compartan foto. Todas
+redimensionadas a 900×900 y recomprimidas a JPEG calidad 82 para no servir varios MB por foto (los
+originales de Wikimedia Commons llegaban a pesar hasta 12 MB).
+
+**Serie principal** — granos tostados a distinta temperatura, de la Sweet Maria's Coffee Library.
+Autor: Dan Bollinger. CC BY-SA 3.0.
+
+- `roast-light.jpg` — [400 degrees New England roast coffee](https://commons.wikimedia.org/wiki/File:400_degrees_new_england_roast_coffee.png)
+- `roast-light-2.jpg` — [385 degrees Cinnamon roast coffee](https://commons.wikimedia.org/wiki/File:385_degrees_cinnamon_roast_coffee.png)
+- `roast-light-3.jpg` — [410 degrees American roast coffee](https://commons.wikimedia.org/wiki/File:410_degrees_american_roast_coffee.png)
+- `roast-medium.jpg` — [425 degrees City roast coffee](https://commons.wikimedia.org/wiki/File:425_degrees_city_roast_coffee.png)
+- `roast-medium-dark.jpg` — [440 degrees Full City roast coffee](https://commons.wikimedia.org/wiki/File:440_degrees_full_city_roast_coffee.png)
+- `roast-medium-dark-2.jpg` — [450 degrees Vienna roast coffee](https://commons.wikimedia.org/wiki/File:450_degrees_vienna_roast_coffee.png)
+- `roast-dark.jpg` — [460 degrees French roast coffee](https://commons.wikimedia.org/wiki/File:460_degrees_french_roast_coffee.png)
+
+**Fotos adicionales** de otros autores:
+
+- `roast-light-4.jpg` — Peaberry coffee beans, close up. Autor: Ragesoss. CC BY-SA 3.0. [Fuente](https://commons.wikimedia.org/wiki/File:Peaberry_coffee_beans,_close_up.jpg)
+- `roast-light-5.jpg` — Roasted coffee beans. Autor: MarkSweep. Dominio público. [Fuente](https://commons.wikimedia.org/wiki/File:Roasted_coffee_beans.jpg)
+- `roast-light-6.jpg` — Roasted coffee beans (mesa de madera). Autor: Daniel Ruswick. CC0. [Fuente](https://commons.wikimedia.org/wiki/File:Roasted_coffee_beans_(Unsplash).jpg)
+- `roast-medium-2.jpg` — Medium roasted Arabica coffee beans. CC BY-SA 3.0. [Fuente](https://commons.wikimedia.org/wiki/File:Medium_roasted_Arabica_coffee_beans.jpg)
+- `roast-medium-3.jpg` — Macro close up look of roasted coffee beans. CC BY-SA 4.0. [Fuente](https://commons.wikimedia.org/wiki/File:Macro_close_up_look_of_roasted_coffee_beans.jpg)
+- `roast-medium-4.jpg` — Coffee beans (manos). Autor: Nathan Dumlao. CC0. [Fuente](https://commons.wikimedia.org/wiki/File:Coffee_beans_1_(Unsplash).jpg)
+- `roast-medium-5.jpg` — Coffee beans (fondo blanco). Autor: Evan-Amos. CC0. [Fuente](https://commons.wikimedia.org/wiki/File:Coffee-Beans.jpg)
+- `roast-medium-dark-3.jpg` — Coffee bean triangle. Autor: John Lodder. CC BY 2.0. [Fuente](https://commons.wikimedia.org/wiki/File:Coffee_bean_triangle_(49374601652).jpg)
+- `roast-medium-dark-4.jpg` — Coffee Beans, color. Autor: Chuck Grimmett. CC0. [Fuente](https://commons.wikimedia.org/wiki/File:Coffee_Beans,_color_(28183654506).jpg)
 
 ## Orígenes (`origins/`)
 

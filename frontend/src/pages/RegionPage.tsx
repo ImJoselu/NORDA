@@ -1,6 +1,6 @@
 import { Link, useParams } from 'react-router-dom'
 import { Card } from '@/components/ui/Card'
-import { OriginArt } from '@/components/ui/OriginArt'
+import { PhotoOrArt } from '@/components/ui/PhotoOrArt'
 import { Seo } from '@/components/seo/Seo'
 import { Skeleton } from '@/components/ui/Skeleton'
 import { ProductCard } from '@/features/catalog/ProductCard'
@@ -56,7 +56,12 @@ export function RegionPage() {
           <h1 className="mt-2 font-display text-4xl text-ink">{data.name}</h1>
           <p className="mt-4 leading-relaxed text-ink-soft">{data.description}</p>
         </div>
-        <OriginArt seed={data.slug} alt={`Región: ${data.name}`} className="aspect-square w-full rounded-card" />
+        <PhotoOrArt
+          src={`/images/origins/${data.country.slug}.jpg`}
+          seed={data.slug}
+          alt={`Región: ${data.name}, ${data.country.name}`}
+          className="aspect-square w-full rounded-card"
+        />
       </div>
 
       <h2 className="mb-6 mt-14 font-display text-2xl text-ink">Productores</h2>

@@ -1,7 +1,7 @@
 /**
  * Composicion abstracta determinista a partir de un seed (slug de producto/origen).
- * Sustituye a fotografia de producto real (de la que no disponemos con licencia
- * verificada) sin recurrir a imagenes rotas ni a placeholders genericos grises.
+ * Fallback de PhotoOrArt cuando la fotografia real falta o falla al cargar, para no
+ * recurrir a imagenes rotas ni a placeholders genericos grises.
  */
 function hashSeed(seed: string): number {
   let hash = 0

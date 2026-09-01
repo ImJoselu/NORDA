@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { Badge } from '@/components/ui/Badge'
-import { OriginArt } from '@/components/ui/OriginArt'
+import { CoffeePhoto } from '@/components/ui/CoffeePhoto'
 import { FavoriteButton } from '@/features/favorites/FavoriteButton'
 import { formatPrice, ROAST_LABELS } from '@/utils/coffeeLabels'
 import type { ProductSummary } from '@/types/catalog'
@@ -9,7 +9,8 @@ export function ProductCard({ product }: { product: ProductSummary }) {
   return (
     <Link to={`/coffee/${product.slug}`} className="group flex flex-col gap-4">
       <div className="relative overflow-hidden rounded-card">
-        <OriginArt
+        <CoffeePhoto
+          roastLevel={product.roastLevel}
           seed={product.slug}
           alt={`${product.name}, café de ${product.countryName}`}
           className="aspect-square w-full transition-transform duration-300 group-hover:scale-105"

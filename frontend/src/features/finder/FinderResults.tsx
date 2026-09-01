@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { Button } from '@/components/ui/Button'
 import { Card } from '@/components/ui/Card'
-import { OriginArt } from '@/components/ui/OriginArt'
+import { CoffeePhoto } from '@/components/ui/CoffeePhoto'
 import { formatPrice } from '@/utils/coffeeLabels'
 import type { FinderResultItem } from '@/types/finder'
 
@@ -27,7 +27,7 @@ export function FinderResults({ results, onRestart }: FinderResultsProps) {
       <div>
         <p className="font-display text-sm uppercase tracking-[0.3em] text-clay-dark">Tu café ideal</p>
         <div className="mt-6 grid grid-cols-1 gap-8 md:grid-cols-2">
-          <OriginArt seed={best.product.slug} alt={best.product.name} className="aspect-square w-full rounded-card" />
+          <CoffeePhoto roastLevel={best.product.roastLevel} seed={best.product.slug} alt={best.product.name} className="aspect-square w-full rounded-card" />
           <div className="flex flex-col justify-center gap-4">
             <p className="font-display text-3xl text-ink">{best.matchPercent}% MATCH</p>
             <h2 className="font-display text-2xl text-ink">{best.product.name}</h2>

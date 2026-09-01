@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import { Badge } from '@/components/ui/Badge'
 import { Button } from '@/components/ui/Button'
-import { OriginArt } from '@/components/ui/OriginArt'
+import { CoffeePhoto } from '@/components/ui/CoffeePhoto'
 import { QuantityStepper } from '@/components/ui/QuantityStepper'
 import { Seo } from '@/components/seo/Seo'
 import { Skeleton } from '@/components/ui/Skeleton'
@@ -98,7 +98,7 @@ export function CoffeeDetail() {
 
       <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
         <div className="relative">
-          <OriginArt seed={product.slug} alt={product.name} className="aspect-square w-full rounded-card" />
+          <CoffeePhoto roastLevel={product.roastLevel} seed={product.slug} alt={product.name} className="aspect-square w-full rounded-card" />
           <FavoriteButton productId={product.id} className="absolute right-4 top-4" />
         </div>
 

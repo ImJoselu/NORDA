@@ -1,6 +1,6 @@
 import { Suspense, lazy } from 'react'
 import { Link } from 'react-router-dom'
-import { PhotoOrArt } from '@/components/ui/PhotoOrArt'
+import { FlagImage } from '@/components/ui/FlagImage'
 import { Seo } from '@/components/seo/Seo'
 import { Skeleton } from '@/components/ui/Skeleton'
 import { useOriginTree } from '@/features/origins/hooks'
@@ -58,10 +58,9 @@ export function Origins() {
             {group.countries.map((country) => (
               <Link key={country.slug} to={`/origins/${country.slug}`} className="group flex flex-col gap-3">
                 <div className="overflow-hidden rounded-card">
-                  <PhotoOrArt
-                    src={`/images/origins/${country.slug}.jpg`}
-                    seed={country.slug}
-                    alt={`Origen: ${country.name}`}
+                  <FlagImage
+                    slug={country.slug}
+                    alt={`Bandera de ${country.name}`}
                     className="aspect-square w-full transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>

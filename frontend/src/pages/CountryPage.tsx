@@ -1,7 +1,7 @@
 import { Suspense, lazy } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { Card } from '@/components/ui/Card'
-import { PhotoOrArt } from '@/components/ui/PhotoOrArt'
+import { FlagImage } from '@/components/ui/FlagImage'
 import { Seo } from '@/components/seo/Seo'
 import { Skeleton } from '@/components/ui/Skeleton'
 import { ProductCard } from '@/features/catalog/ProductCard'
@@ -53,10 +53,9 @@ export function CountryPage() {
         <Link to="/origins" className="hover:text-ink">Orígenes</Link>
       </nav>
 
-      <PhotoOrArt
-        src={`/images/origins/${data.slug}.jpg`}
-        seed={data.slug}
-        alt={`Paisaje cafetero de ${data.name}`}
+      <FlagImage
+        slug={data.slug}
+        alt={`Bandera de ${data.name}`}
         className="mb-10 h-64 w-full rounded-card sm:h-80"
       />
 
